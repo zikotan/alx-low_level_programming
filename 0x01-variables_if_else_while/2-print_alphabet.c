@@ -10,7 +10,7 @@ int main(void)
 	char alp[] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
 
-	for (i = 0; al[i] != '\0'; i++)
+	for (i = 0; alp[i] != '\0'; i++)
 		putchar(alp[i]);
 	putchar('\n');
 	return (0);
