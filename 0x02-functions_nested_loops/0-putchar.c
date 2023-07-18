@@ -7,8 +7,8 @@
 int main(void)
 {
 	int i;
-	char sent[]="_putchar";
-	for(i = 0; i < 8; i++)
+	char sent[9]="_putchar";
+	for(i = 0; i < 9; i++)
 		putchar(sent[i]);
 	putchar('\n');
 	return (0);
