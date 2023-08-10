@@ -22,13 +22,13 @@ char *mem(char *s0, char a, unsigned int n)
 }
 
 /**
- * *callocation - allocates memory for an array
+ * *_calloc - allocates memory for an array
  * @nmemb: the number of elements in the array
  * @size: the size of each element
  *
  * Return: a pointer to the allocated memory
  */
-void *callocation(unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
 
