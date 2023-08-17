@@ -11,7 +11,7 @@
  * Description: If separator is NULL, it's not printed.
  *              If one of the s is NULL, (nil) is printed instead.
  */
-void print_s(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list s;
 	char *str;
