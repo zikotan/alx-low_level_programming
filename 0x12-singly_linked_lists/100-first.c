@@ -7,8 +7,8 @@ void intr(void) __attribute__((constructor));
  */
 void intr(void)
 {
-	printf("You're welcomed! Although, you must permit,\n");
-	printf("I carry my dwelling on my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
 
 /**
@@ -21,4 +21,3 @@ int main(void)
 	intr();
 	return (0);
 }
-
