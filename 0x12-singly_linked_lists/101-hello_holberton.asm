@@ -1,5 +1,5 @@
 section .data
-    format db "Hello, Holberton", 0
+    format db "Hello, Holberton", 10, 0 ; 10 represents newline
 
 section .text
 global main
