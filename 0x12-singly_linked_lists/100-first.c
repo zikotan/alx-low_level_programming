@@ -8,16 +8,5 @@ void intr(void) __attribute__((constructor));
 void intr(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
-	printf("I bore my house upon my back!\n");
-}
-
-/**
- * main - the main
- *
- * Return: 0
- */
-int main(void)
-{
-	intr();
-	return (0);
+	printf("I bore my house upon my back!\n);
 }
