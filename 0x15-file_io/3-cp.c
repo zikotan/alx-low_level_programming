@@ -39,7 +39,7 @@ void close_f(int feed)
 
 	if (C == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close feed %d\n", feed);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", feed);
 		exit(100);
 	}
 }
