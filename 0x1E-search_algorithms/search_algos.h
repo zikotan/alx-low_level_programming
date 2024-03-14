@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 /**
- * listint_s - linked list
+ * struct listint_s - linked list
  *
  * @n: Integer
  * @index: Index of the node in the list
