@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <unistd.h> // Include the header for write function
 
 /**
   * linear_search - func
@@ -11,23 +10,17 @@
   */
 int linear_search(int *array, size_t size, int value)
 {
-    size_t i;
-    char buf[1024]; // Buffer for storing the message
+	size_t i;
 
-    if (array == NULL)
-        return (-1);
+	if (array == NULL)
+		return (-1);
 
-    for (i = 0; i < size; i++)
-    {
-        // Formulate the message string
-        int length = snprintf(buf, sizeof(buf), "Value checked array[%ld] = [%d]\n", i, array[i]);
+	for (i = 0; i < size; i++)
+	{
+		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+		if (array[i] == value)
+			return (i);
+	}
 
-        // Write the message to standard output (file descriptor 1)
-        write(1, buf, length);
-        
-        if (array[i] == value)
-            return (i);
-    }
-
-    return (-1);
+	return (-1);
 }
