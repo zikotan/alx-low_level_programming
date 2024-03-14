@@ -2,9 +2,9 @@
 
 /**
   * jump_search - func
-  * @array:arg1  
+  * @array:arg1
   * @size: arg2
-  * @value:arg3 
+  * @value:arg3
   *
   * Return: int
   */

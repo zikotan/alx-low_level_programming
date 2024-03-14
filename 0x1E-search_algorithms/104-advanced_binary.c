@@ -2,9 +2,9 @@
 
 /**
   * advanced_binary_recursive - func
-  * @array:arg1  
+  * @array:arg1
   * @left: arg2
-  * @right:arg3 
+  * @right:arg3
   * @value:arg4
   *
   * Return: int
@@ -31,9 +31,9 @@ int advanced_binary_recursive(int *array, size_t left, size_t right, int value)
 
 /**
   * advanced_binary - func
-  * @array:arg1  
+  * @array:arg1
   * @size: arg2
-  * @value:arg3 
+  * @value:arg3
   *
   * Return: int
   */

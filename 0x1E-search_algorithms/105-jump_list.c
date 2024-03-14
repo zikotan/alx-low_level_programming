@@ -2,39 +2,39 @@
 
 /**
   * jump_list - func
-  * @list:arg1  
+  * @list:arg1
   * @size: arg2
-  * @value:arg3 
+  * @value:arg3
   *
   * Return: int
   */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	size_t my_step, my_step_size;
-	listint_t *my_node, *my_jump;
+	listint_t *_node, *_jump;
 
 	if (list == NULL || size == 0)
 		return (NULL);
 
 	my_step = 0;
 	my_step_size = sqrt(size);
-	for (my_node = my_jump = list; my_jump->index + 1 < size && my_jump->n < value;)
+	for (_node = _jump = list; _jump->index + 1 < size && _jump->n < value;)
 	{
-		my_node = my_jump;
-		for (my_step += my_step_size; my_jump->index < my_step; my_jump = my_jump->next)
+		_node = _jump;
+		for (my_step += my_step_size; _jump->index < my_step; _jump = _jump->next)
 		{
-			if (my_jump->index + 1 == size)
+			if (_jump->index + 1 == size)
 				break;
 		}
-		printf("Value checked at index [%ld] = [%d]\n", my_jump->index, my_jump->n);
+		printf("Value checked at index [%ld] = [%d]\n", _jump->index, _jump->n);
 	}
 
 	printf("Value found between indexes [%ld] and [%ld]\n",
-			my_node->index, my_jump->index);
+			_node->index, _jump->index);
 
-	for (; my_node->index < my_jump->index && my_node->n < value; my_node = my_node->next)
-		printf("Value checked at index [%ld] = [%d]\n", my_node->index, my_node->n);
-	printf("Value checked at index [%ld] = [%d]\n", my_node->index, my_node->n);
+	for (; _node->index < _jump->index && _node->n < value; _node = _node->next)
+		printf("Value checked at index [%ld] = [%d]\n", _node->index, _node->n);
+	printf("Value checked at index [%ld] = [%d]\n", _node->index, _node->n);
 
-	return (my_node->n == value ? my_node : NULL);
+	return (_node->n == value ? _node : NULL);
 }

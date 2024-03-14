@@ -2,40 +2,40 @@
 
 /**
   * linear_skip - func
-  * @list:arg1  
+  * @list:arg1
   * @value: arg2
   *
   * Return: int
   */
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-	skiplist_t *my_node, *my_jump;
+	skiplist_t *_node, *_jump;
 
 	if (list == NULL)
 		return (NULL);
 
-	for (my_node = my_jump = list; my_jump->next != NULL && my_jump->n < value;)
+	for (_node = _jump = list; _jump->next != NULL && _jump->n < value;)
 	{
-		my_node = my_jump;
-		if (my_jump->express != NULL)
+		_node = _jump;
+		if (_jump->express != NULL)
 		{
-			my_jump = my_jump->express;
+			_jump = _jump->express;
 			printf("Value checked at index [%ld] = [%d]\n",
-					my_jump->index, my_jump->n);
+					_jump->index, _jump->n);
 		}
 		else
 		{
-			while (my_jump->next != NULL)
-				my_jump = my_jump->next;
+			while (_jump->next != NULL)
+				_jump = _jump->next;
 		}
 	}
 
 	printf("Value found between indexes [%ld] and [%ld]\n",
-			my_node->index, my_jump->index);
+			_node->index, _jump->index);
 
-	for (; my_node->index < my_jump->index && my_node->n < value; my_node = my_node->next)
-		printf("Value checked at index [%ld] = [%d]\n", my_node->index, my_node->n);
-	printf("Value checked at index [%ld] = [%d]\n", my_node->index, my_node->n);
+	for (; _node->index < _jump->index && _node->n < value; _node = _node->next)
+		printf("Value checked at index [%ld] = [%d]\n", _node->index, _node->n);
+	printf("Value checked at index [%ld] = [%d]\n", _node->index, _node->n);
 
-	return (my_node->n == value ? my_node : NULL);
+	return (_node->n == value ? _node : NULL);
 }
